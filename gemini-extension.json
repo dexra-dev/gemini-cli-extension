@@ -1,0 +1,23 @@
+{
+  "name": "dexra",
+  "version": "0.1.0",
+  "description": "Solana DeFi checks for AI agents: token launches, holders, wallets, pools, perp markets and swap preflight, each with a verdict, reasons and evidence.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "dexra": {
+      "httpUrl": "https://api.dexra.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${DEXRA_API_KEY}"
+      },
+      "timeout": 60000
+    }
+  },
+  "settings": [
+    {
+      "name": "Dexra API key",
+      "description": "Optional dxr_... key from https://dexra.dev/app/keys. Leave empty to use the free tools and pay per call in USDC over x402.",
+      "envVar": "DEXRA_API_KEY",
+      "sensitive": true
+    }
+  ]
+}
